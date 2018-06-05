@@ -27,22 +27,65 @@ form.addEventListener("submit", (e)=>{
 
 // part 2, listen for new data
 database.ref("notes/").on("child_added", (snapshot)=>{
-    console.log(snapshot);
-
+    // console.log(snapshot);
     const key = snapshot.key;
     const data = snapshot.val();
     // console.log(key, data)
 
     const clone = template.cloneNode(true);
+
+    clone.querySelector("article").dataset.key = key;
     clone.querySelector("h1").textContent = data.header;
     clone.querySelector("div.description").textContent = data.description;
+    clone.querySelector("button.delete").addEventListener("click", e=>{
+        // if you have to append something to the end, you can just concatenate with +
+        database.ref("notes/"+key).remove();
+    });
+
 
     app.appendChild(clone);
 
 });
 
 
-// update UI when stuff is deleted
+//listen for removal of data child_removed
+database.ref("notes/").on("child_removed", snapshot=>{
+    const key = snapshot.key;
+    // use backticks for using variable 'key'
+    let el = document.querySelector(`article[data-key=${key}]`);
+
+    el.remove();
+    console.log(el);
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//update UI when stuff is deleted
+
+
+//underneath each post - edit and delete
+
+
+//childremoved event
+
+
+
+
+
+
 
 
 
