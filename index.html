@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAFlDSmrNnXUU4_rUfcZvJgy7kXxpJGJ2A",
+        authDomain: "jsnotes-3b461.firebaseapp.com",
+        databaseURL: "https://jsnotes-3b461.firebaseio.com",
+        projectId: "jsnotes-3b461",
+        storageBucket: "",
+        messagingSenderId: "418485212529"
+      };
+      firebase.initializeApp(config);
+    //   console.log(firebase);
+    </script>
+
+</head>
+<body>
+
+
+    <form action="">
+        <label>
+            Header
+            <input type="text" name="header" id="form_header">
+        </label>
+
+        <label>
+            Description
+            <textarea name="description" cols="30" rows="10" id="form_description"></textarea>
+        </label>
+
+        <input type="submit" value="add to google">
+    
+    </form>
+
+<!-- store all articles -->
+    <div id="app"></div>
+
+    <template id="noteTemplate">
+        <article>
+            <h1></h1>
+            <div class="description"></div>
+        </article>
+    </template>
+
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
