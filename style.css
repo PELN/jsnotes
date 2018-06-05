@@ -64,11 +64,6 @@ input[name="header"]{
     margin-bottom: 2vw;
 }
 
-input[name="description"]{
-    
-}
-
-
 main {
     margin-top: 5vw;
     width: 50vw;
@@ -83,9 +78,6 @@ main {
 
 #appContainer{
     margin-top: 5vw;
-
-    /* display: grid;
-    justify-content: center; */
 }
 
 #formContainer{
@@ -96,8 +88,7 @@ main {
 
 }
 
-#formen {
-    /* display: grid;
-    justify-content: center; */
-}
+/* #formen {
+   
+} */
 
