@@ -1,7 +1,26 @@
 label, input, textarea {
     display: block;
-    
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+
+article {
+    border: 1px solid black;
+    margin-bottom: 4vw;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50vw;
+    padding: 0vw 0vw 4vw 2vw;
+}
+
+
+.edit {
+    background-color: rgb(118, 236, 154);
+}
+
+.delete{
+    background-color: rgb(149, 201, 247);
+}
+
 
 
 

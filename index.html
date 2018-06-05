@@ -29,8 +29,8 @@
 
     <form action="">
         <label>
-            Header
-            <input type="text" name="header" id="form_header">
+            Note title
+            <input required minlength="3" pattern="[A-Za-z]+" maxlength="42" type="text" name="header" id="form_header" placeholder="Your title here">
         </label>
 
         <label>
@@ -45,6 +45,10 @@
 <!-- store all articles -->
     <div id="app"></div>
 
+
+
+
+
     <template id="noteTemplate">
         <article>
             <h1></h1>
@@ -53,11 +57,24 @@
                 <button class="edit">Edit</button> <button class="delete">Delete</button>
             </footer>
         </article>
-
     </template>
 
 
-
+    <template id="editFormTemplate">
+            <form action="">
+                    <label>
+                        Note title
+                        <input required minlength="3" pattern="[ A-Z a-z]+" maxlength="42" type="text" name="header" placeholder="Your title here">
+                    </label>
+            
+                    <label>
+                        Description
+                        <textarea name="description" cols="30" rows="10"></textarea>
+                    </label>
+            
+                    <input type="submit" value="add to google">
+                </form>
+    </template>
 
 
 
