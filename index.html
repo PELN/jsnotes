@@ -26,11 +26,15 @@
 </head>
 <body>
 
+<main>
 
-    <form action="">
+    <h1>NOTES</h1>
+
+<div id="formContainer">
+    <form action="" id="formen">
         <label>
             Note title
-            <input required minlength="3" pattern="[A-Za-z]+" maxlength="42" type="text" name="header" id="form_header" placeholder="Your title here">
+            <input required minlength="3" pattern="[ A-Z a-z ]+" maxlength="42" type="text" name="header" id="form_header" placeholder="Your title here">
         </label>
 
         <label>
@@ -38,15 +42,16 @@
             <textarea name="description" cols="30" rows="10" id="form_description"></textarea>
         </label>
 
-        <input type="submit" value="add to google">
-    
+        <input name="submit" type="submit" value="add to list">
     </form>
+</div>
 
+<div id="appContainer">
 <!-- store all articles -->
     <div id="app"></div>
+</div>
 
-
-
+</main>
 
 
     <template id="noteTemplate">
@@ -64,7 +69,7 @@
             <form action="">
                     <label>
                         Note title
-                        <input required minlength="3" pattern="[ A-Z a-z]+" maxlength="42" type="text" name="header" placeholder="Your title here">
+                        <input required minlength="3" pattern="[ A-Z a-z ]+" maxlength="42" type="text" name="header" placeholder="Your title here">
                     </label>
             
                     <label>
@@ -72,9 +77,10 @@
                         <textarea name="description" cols="30" rows="10"></textarea>
                     </label>
             
-                    <input type="submit" value="add to google">
+                    <input name="submit" type="submit" value="add to list">
                 </form>
     </template>
+
 
 
 
